@@ -1,82 +1,12 @@
 const Discord = require('discord.js');
-//lient = new Discord.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', ''] });
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
-
-
 const { Client, Intents } = require('discord.js');
-
 const myIntents = new Intents(32509);
-
 const client = new Client({ intents: myIntents  });
-
-// more examples about manipulating the bitfield
-
-
-
-
-
-
-
-
 require("./util/eventLoader.js")(client)
-/*var rpc = require("discord-rpc")
-client.on('ready', () => {
-    client.api.applications(client.user.id).guilds("818975235873308692").commands.post({
-        data: {
-            name: "yardim",
-            description: "Yardım Komutu"
-            // possible options here e.g. options: [{...}]
-        }
-    });
-
-
-    client.ws.on('INTERACTION_CREATE', async interaction => {
-        const command = interaction.data.name.toLowerCase();
-        const args = interaction.data.options;
-
-        if (command === 'yardim'){ 
-            // here you could do anything. in this sample
-            // i reply with an api interaction
-            client.api.interactions(interaction.id, interaction.token).callback.post({
-                data: {
-                    type: 4,
-                    data: {
-                        command: "yardım" 
-                    }
-                }
-            })
-        }
-    });
-});*/
-
-/*
-const cliento = new rpc.Client({ transport: 'ipc' })
-cliento.on('ready', () => {
-cliento.request('SET_ACTIVITY', {
-pid: process.pid,
-activity : {
-details : "Cat Bot ❤️",
-assets : {
-large_image : "https://cdn.discordapp.com/avatars/777239707818000425/613051b47bd7f53d39998fd0fb339591.webp?size=2048",
-large_text : "Made By AntiCode Development" // bu gözükmeyebilir!!
-},
-buttons : [{label : "AntiCode Development" , url : "https://discord.gg/k8qUR8dY"},{label : "AntiCode Development Instagram",url : "https://instagram.com/anticode.development"}] //kendinize göre yazın
-}
-})
-})
-*/
-/*client.on('disconnect', message => {
-    const kanal = client.channels.cache.get('818128225120157706')
-    kanal.send(`Su içip geliyorum`)
-});*/
-
-/*client.on('resume', message => {
-    const kanal = client.channels.cache.get('818128257207238666')
-    kanal.send(`Sa ben döndüm`)
-});*/
 
 var prefix = ayarlar.prefix;
 
@@ -173,33 +103,5 @@ client.on('warn', e => {
 client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
-/*onst embedxd = new Discord.MessageEmbed() 
-
-.setDescription
-(
- `Pingim ${client.ws.ping} ms!`
-) 
-client.on("ready", () => {
-  client.api.applications(client.user.id).commands.post({
-    data: {
-      name: 'ping',
-      description: 'Botun Pingini Görün <3 Anticode'
-    }
-  })
-});
-client.ws.on('INTERACTION_CREATE', async interaction => {
-  const command = interaction.data.name();
-
-  if (command == 'yardımtest') {
-    client.api.interactions(interaction.id, interaction.token).callback.post({
-      data: {
-        type: 4,
-        data: {
-          embeds: [ embedxd ]
-        }
-      }
-    })
-  }
-});*/
 
 client.login(ayarlar.token);
