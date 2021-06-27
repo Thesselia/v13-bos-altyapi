@@ -1,6 +1,4 @@
-# Loz 'Bey V12 Temiz Altyapı
+# CodeAnti V13 Boş Altyapı
 
-Çalınması Serbesttir.
-Hak Mak Yoktur.
 
-Doya Doya Kullanınız...
+
