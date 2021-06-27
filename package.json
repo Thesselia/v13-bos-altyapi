@@ -1,0 +1,39 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "YnsEmreArpaci",
+  "version": "0.0.1",
+  "description": "YnsEmreArpaci.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node --trace-warnings bot.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
+    "os": "^0.1.1",
+    "process": "^0.11.10",
+    "moment-duration-format": "^2.3.2",
+    "discord-rpc": "^3.2.0",
+    "wio.db": "^4.0.10",
+    "superagent": "^6.1.0",
+    "npm.db": "^2.0.7",
+    "discord-buttons": "^2.4.1",
+    "node-fetch": "^2.6.1",
+    "discord.js": "dev"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
