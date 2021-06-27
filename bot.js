@@ -85,8 +85,8 @@ client.elevation = message => {
 	return;
    } 
   let permlvl = 0;
-  if (message.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)) permlvl = 2;
-  if (message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) permlvl = 3;
+  if (message.member.permissions.has(Discord.Permissions.FLAGS.BAN_MEMBERS)) permlvl = 2;
+  if (message.member.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)) permlvl = 3;
   if (message.author.id === ayarlar.sahip) permlvl = 5;
   return permlvl;
 };
